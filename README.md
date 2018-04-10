@@ -4,6 +4,6 @@
 
 
 #### 左右联动选择器图示
-<p align="center">
-<img width="200" height="200" src="https://github.com/miaozhang9/SelectorDemo/blob/master/Screenshots/1.png">
+<p align="left">
+<img src="https://github.com/miaozhang9/SelectorDemo/blob/master/Screenshots/1.png">
 </p>
