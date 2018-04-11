@@ -10,6 +10,8 @@
 #import "ACChoiceAppointTimeViewController.h"
 #import "ACAvailableListDTO.h"
 #import "NSDate+Addtion.h"
+#import <Masonry/Masonry.h>
+
 @interface ViewController ()<PCChoiceAppointTimeDelegate>
 @property (nonatomic, strong) UILabel *titleLab;
 @end
@@ -20,25 +22,42 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 100, 200, 60);
     [button setTitle:@"左右联动选择器" forState:UIControlStateNormal];
     button.backgroundColor = [UIColor redColor];
     [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    button2.frame = CGRectMake(100, 200, 200, 60);
     [button2 setTitle:@"上下联动选择列表" forState:UIControlStateNormal];
     button2.backgroundColor = [UIColor redColor];
     [button2 addTarget:self action:@selector(click2:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
     
     UILabel *titleLab = [UILabel new];
-    titleLab.frame = CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, 60);
     titleLab.textAlignment = NSTextAlignmentCenter;
     _titleLab = titleLab;
     [self.view addSubview:titleLab];
     
+    __weak typeof (self) weakself = self;
+    
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(60 + 100));
+        make.left.equalTo(@60);
+        make.right.equalTo(@-60);
+        make.height.equalTo(@60);
+    }];
+    
+    [button2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(button);
+        make.top.equalTo(button.mas_bottom).offset(50);
+        make.size.equalTo(button);
+    }];
+
+    [titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+         make.centerX.equalTo(button);
+        make.top.equalTo(@(60 + 10));
+        make.size.mas_equalTo(CGSizeMake([UIScreen mainScreen].bounds.size.width, 60));
+    }];
    
 }
 
@@ -91,7 +110,7 @@
 - (void)click:(id)sender {
     ACChoiceAppointTimeViewController *appointTimeVC =[[ACChoiceAppointTimeViewController alloc]initWithAppointTimeDelegate:self];
     [appointTimeVC updateDataSource:[self getData]];
-    [appointTimeVC presentAppointTimeViewWithController:self];
+    [appointTimeVC presentAppointTimeViewWithController:self.navigationController];
     
     
     
@@ -106,6 +125,7 @@
 
 - (void)confirmChoiceAppointTime:(NSString *)appointDate availableDTO:(ACAvailableDTO*)availableDTO {
     //回调
+    
     _titleLab.text = [NSString stringWithFormat:@"%@  %@",[NSDate onlydateFormatterWithTime:appointDate],[NSString stringWithFormat:@"%@ - %@", availableDTO.starttime, availableDTO.endtime]];
     
 }
