@@ -7,3 +7,8 @@
 <p align="left">
 <img width="375" height="650" src="https://github.com/miaozhang9/SelectorDemo/blob/master/Screenshots/1.png">
 </p>
+
+### 上下联动选择表图示
+<p align="left">
+<img width="375" height="650" src="https://github.com/miaozhang9/SelectorDemo/blob/master/Screenshots/2.png">
+</p>

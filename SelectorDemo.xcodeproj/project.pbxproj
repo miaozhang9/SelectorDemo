@@ -24,6 +24,11 @@
 		9BECDCD1207CC44B009961AA /* NSString+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCC9207CC44B009961AA /* NSString+Addtion.m */; };
 		9BECDCD2207CC44B009961AA /* UIImage+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCCA207CC44B009961AA /* UIImage+Addtion.m */; };
 		9BECDCD5207CC66D009961AA /* ACChoiceAppointTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCD4207CC66D009961AA /* ACChoiceAppointTimeViewController.m */; };
+		9BECDCDC207DA9DE009961AA /* ACAppointDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCDB207DA9DE009961AA /* ACAppointDateView.m */; };
+		9BECDCE2207DABB5009961AA /* ACAppointSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCE1207DABB5009961AA /* ACAppointSelectorView.m */; };
+		9BECDCE5207DACA3009961AA /* ACAppointSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCE4207DACA3009961AA /* ACAppointSelectorViewController.m */; };
+		9BECDCE8207DADAB009961AA /* ACAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCE7207DADAB009961AA /* ACAlertManager.m */; };
+		9BECDCF2207DB8BB009961AA /* ACAppointTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECDCF0207DB8BB009961AA /* ACAppointTimeView.m */; };
 		DBB4BAE301CA3B795666A630 /* libPods-SelectorDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6DA0782BF45FE75C0A73CB /* libPods-SelectorDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +67,17 @@
 		9BECDCCA207CC44B009961AA /* UIImage+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Addtion.m"; sourceTree = "<group>"; };
 		9BECDCD3207CC66D009961AA /* ACChoiceAppointTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACChoiceAppointTimeViewController.h; sourceTree = "<group>"; };
 		9BECDCD4207CC66D009961AA /* ACChoiceAppointTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACChoiceAppointTimeViewController.m; sourceTree = "<group>"; };
+		9BECDCDA207DA9DE009961AA /* ACAppointDateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppointDateView.h; sourceTree = "<group>"; };
+		9BECDCDB207DA9DE009961AA /* ACAppointDateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppointDateView.m; sourceTree = "<group>"; };
+		9BECDCE0207DABB5009961AA /* ACAppointSelectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppointSelectorView.h; sourceTree = "<group>"; };
+		9BECDCE1207DABB5009961AA /* ACAppointSelectorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppointSelectorView.m; sourceTree = "<group>"; };
+		9BECDCE3207DACA3009961AA /* ACAppointSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppointSelectorViewController.h; sourceTree = "<group>"; };
+		9BECDCE4207DACA3009961AA /* ACAppointSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppointSelectorViewController.m; sourceTree = "<group>"; };
+		9BECDCE6207DADAB009961AA /* ACAlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAlertManager.h; sourceTree = "<group>"; };
+		9BECDCE7207DADAB009961AA /* ACAlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAlertManager.m; sourceTree = "<group>"; };
+		9BECDCF0207DB8BB009961AA /* ACAppointTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAppointTimeView.m; sourceTree = "<group>"; };
+		9BECDCF1207DB8BB009961AA /* ACAppointTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAppointTimeView.h; sourceTree = "<group>"; };
+		9BECDCF4207DBB3B009961AA /* ACAppointSelectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAppointSelectorProtocol.h; sourceTree = "<group>"; };
 		CD6DA0782BF45FE75C0A73CB /* libPods-SelectorDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelectorDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +129,7 @@
 				9BECDC95207CB70E009961AA /* ViewController.m */,
 				9BECDCBA207CC44A009961AA /* Category */,
 				9BECDCA7207CB823009961AA /* SelectorBox */,
+				9BECDCD9207DA973009961AA /* SelectorListVC */,
 				9BECDC97207CB70E009961AA /* Main.storyboard */,
 				9BECDC9A207CB711009961AA /* Assets.xcassets */,
 				9BECDC9C207CB711009961AA /* LaunchScreen.storyboard */,
@@ -156,6 +173,24 @@
 				9BECDCCA207CC44B009961AA /* UIImage+Addtion.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		9BECDCD9207DA973009961AA /* SelectorListVC */ = {
+			isa = PBXGroup;
+			children = (
+				9BECDCDA207DA9DE009961AA /* ACAppointDateView.h */,
+				9BECDCDB207DA9DE009961AA /* ACAppointDateView.m */,
+				9BECDCE0207DABB5009961AA /* ACAppointSelectorView.h */,
+				9BECDCE1207DABB5009961AA /* ACAppointSelectorView.m */,
+				9BECDCE3207DACA3009961AA /* ACAppointSelectorViewController.h */,
+				9BECDCE4207DACA3009961AA /* ACAppointSelectorViewController.m */,
+				9BECDCE6207DADAB009961AA /* ACAlertManager.h */,
+				9BECDCE7207DADAB009961AA /* ACAlertManager.m */,
+				9BECDCF1207DB8BB009961AA /* ACAppointTimeView.h */,
+				9BECDCF0207DB8BB009961AA /* ACAppointTimeView.m */,
+				9BECDCF4207DBB3B009961AA /* ACAppointSelectorProtocol.h */,
+			);
+			path = SelectorListVC;
 			sourceTree = "<group>";
 		};
 		A83E96F2134483A4DBE1285F /* Frameworks */ = {
@@ -260,6 +295,8 @@
 			files = (
 				9BECDCCC207CC44B009961AA /* UIColor+Addtion.m in Sources */,
 				9BECDCD0207CC44B009961AA /* UIFont+Addtion.m in Sources */,
+				9BECDCE8207DADAB009961AA /* ACAlertManager.m in Sources */,
+				9BECDCE2207DABB5009961AA /* ACAppointSelectorView.m in Sources */,
 				9BECDCCF207CC44B009961AA /* NSNumber+Addtion.m in Sources */,
 				9BECDCCB207CC44B009961AA /* UIView+Addtion.m in Sources */,
 				9BECDCD5207CC66D009961AA /* ACChoiceAppointTimeViewController.m in Sources */,
@@ -267,9 +304,12 @@
 				9BECDCCE207CC44B009961AA /* NSDate+Addtion.m in Sources */,
 				9BECDCA1207CB711009961AA /* main.m in Sources */,
 				9BECDCD2207CC44B009961AA /* UIImage+Addtion.m in Sources */,
+				9BECDCE5207DACA3009961AA /* ACAppointSelectorViewController.m in Sources */,
 				9BECDCCD207CC44B009961AA /* UIApplication+UserNotificaitonHelper.m in Sources */,
 				9BECDC93207CB70E009961AA /* AppDelegate.m in Sources */,
 				9BECDCB9207CBB80009961AA /* ACChoiceAppointTimeListView.m in Sources */,
+				9BECDCDC207DA9DE009961AA /* ACAppointDateView.m in Sources */,
+				9BECDCF2207DB8BB009961AA /* ACAppointTimeView.m in Sources */,
 				9BECDCB6207CBB34009961AA /* ACAvailableListDTO.m in Sources */,
 				9BECDCD1207CC44B009961AA /* NSString+Addtion.m in Sources */,
 			);
