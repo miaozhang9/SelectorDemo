@@ -74,9 +74,6 @@
         make.top.equalTo(button2.mas_bottom).offset(50);
         make.size.equalTo(button);
     }];
-
-   
-   
 }
 
 #pragma mark -data
@@ -170,12 +167,11 @@
 
 - (void)confirmChoiceAppointTime:(NSString *)appointDate availableDTO:(ACAvailableDTO*)availableDTO {
     //回调
-    
-    _titleLab.text = [NSString stringWithFormat:@"上下联动%@  %@",[NSDate onlydateFormatterWithTime:appointDate],[NSString stringWithFormat:@"%@ - %@", availableDTO.starttime, availableDTO.endtime]];
-    
+    _titleLab.text = [NSString stringWithFormat:@"左右联动%@  %@",[NSDate onlydateFormatterWithTime:appointDate],[NSString stringWithFormat:@"%@ - %@", availableDTO.starttime, availableDTO.endtime]];
 }
 
 #pragma mark -ACAppointSelectorProtocol
+
 - (void)confirmAppointSelectTime:(ACAvailableDayDTO *)availableDayDTO availableDTO:(ACAvailableDTO *)availableDTO {
     
     _titleLab.text = [NSString stringWithFormat:@"上下联动%@  %@",[NSDate onlydateFormatterWithTime:availableDayDTO.appointdate],[NSString stringWithFormat:@"%@ - %@", availableDTO.starttime, availableDTO.endtime]];

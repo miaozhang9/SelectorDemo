@@ -1,16 +1,17 @@
 # SelectorDemo
 ### 1.左右联动选择器（两个TableView实现）
 ### 2.上下联动选择表（一个CollectionView和一个TableView实现）
+（注意：pod库需要导入 pod 'Masonry', '1.1.0'）
 
 
-### *代码调用
-#### 左右联动选择器
+### *代码调用事例
+#### *左右联动选择器
 ```
 ACChoiceAppointTimeViewController *appointTimeVC =[[ACChoiceAppointTimeViewController alloc]initWithAppointTimeDelegate:self];
 [appointTimeVC updateDataSource:[self getData]];
 [appointTimeVC presentAppointTimeViewWithController:self.navigationController];
 ```
-#### 上下联动选择表(Push)
+#### *上下联动选择表(Push)
 ```
 ACAppointSelectorViewController *appointSelectorVC = [[ACAppointSelectorViewController alloc] init];
 appointSelectorVC.delegate = self;
@@ -18,7 +19,7 @@ appointSelectorVC.delegate = self;
 appointSelectorVC.orderAppointState = ACFaceCheckOrderAppointState_appointupdate;
 [self.navigationController pushViewController:appointSelectorVC animated:YES];
 ```
-#### 上下联动选择表(Present)
+#### *上下联动选择表(Present)
 ```
 ACAppointSelectorViewController *appointSelectorVC = [[ACAppointSelectorViewController alloc] init];
 appointSelectorVC.delegate = self;
@@ -27,7 +28,7 @@ appointSelectorVC.orderAppointState = ACFaceCheckOrderAppointState_appointupdate
 UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:appointSelectorVC];
 [self presentViewController:nav animated:YES completion:nil];
 ```
-#### 数据源
+#### *数据源
 ```
 - (ACAvailableListDTO *)getData {
 ACAvailableListDTO *dto = [ACAvailableListDTO new];
