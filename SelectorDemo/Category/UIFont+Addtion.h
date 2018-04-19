@@ -1,8 +1,5 @@
 //
 //  UIFont+Addtion.h
-//  GammRayFilters
-//
-
 
 #import <UIKit/UIKit.h>
 

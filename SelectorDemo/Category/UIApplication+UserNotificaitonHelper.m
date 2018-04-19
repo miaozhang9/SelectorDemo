@@ -1,8 +1,5 @@
 //
 //  UIApplication+UserNotificaitonHelper.m
-//  QHLoanSDK
-
-
 #import "UIApplication+UserNotificaitonHelper.h"
 
 @implementation UIApplication (UserNotificaitonHelper)

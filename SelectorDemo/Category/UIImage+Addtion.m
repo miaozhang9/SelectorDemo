@@ -1,8 +1,5 @@
 //
 //  UIImage+Addtion.m
-//  PersonalCenter
-//
-
 #import "UIImage+Addtion.h"
 
 @implementation UIImage (Addtion)

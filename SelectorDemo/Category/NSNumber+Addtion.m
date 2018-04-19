@@ -1,11 +1,7 @@
 //
 //  NSNumber+Addtion.m
-//  ACFaceCheckLib
-//
-
 
 #import "NSNumber+Addtion.h"
-
 #import "NSString+Addtion.h"
 
 @implementation NSNumber (Addtion)

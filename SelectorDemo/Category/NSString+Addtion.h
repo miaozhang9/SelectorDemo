@@ -1,8 +1,5 @@
 //
 //  NSString+Addtion.h
-//  PersonalCenter
-//
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 

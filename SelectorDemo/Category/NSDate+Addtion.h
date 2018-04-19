@@ -1,8 +1,5 @@
 //
 //  NSDate+Addtion.h
-//  PersonalCenter
-
-
 #import <Foundation/Foundation.h>
 
 @interface NSDate (Addtion)

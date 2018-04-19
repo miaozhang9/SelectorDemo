@@ -1,8 +1,5 @@
 //
 //  NSDate+Addtion.m
-//  PersonalCenter
-//
-
 
 #import "NSDate+Addtion.h"
 // YYYY-MM-dd yyyy-MM-dd HH:mm:ss

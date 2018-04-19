@@ -1,9 +1,5 @@
 //
 //  UIFont+Addtion.m
-//  GammRayFilters
-//
-
-
 #import "UIFont+Addtion.h"
 
 @implementation UIFont (Addtion)

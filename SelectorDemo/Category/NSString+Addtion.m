@@ -1,9 +1,5 @@
 //
 //  NSString+Addtion.m
-//  PersonalCenter
-//
-
-
 #import "NSString+Addtion.h"
 
 @implementation NSString (Addtion)

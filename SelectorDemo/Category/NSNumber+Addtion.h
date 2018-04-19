@@ -1,8 +1,5 @@
 //
 //  NSNumber+Addtion.h
-//  ACFaceCheckLib
-//
-
 
 #import <Foundation/Foundation.h>
 

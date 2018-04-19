@@ -1,8 +1,5 @@
 //
 //  UIImage+Addtion.h
-//  PersonalCenter
-//
-
 
 #import <UIKit/UIKit.h>
 

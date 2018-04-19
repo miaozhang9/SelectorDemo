@@ -1,7 +1,5 @@
 //
 //  UIView+Addtion.h
-//  ACFaceCheckLib
-//
 
 #import <UIKit/UIKit.h>
 

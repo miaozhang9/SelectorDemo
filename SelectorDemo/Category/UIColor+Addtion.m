@@ -1,8 +1,5 @@
 //
 //  UIColor+Addtion.m
-//  PersonalCenter
-
-
 #import "UIColor+Addtion.h"
 
 @implementation UIColor (Addtion)

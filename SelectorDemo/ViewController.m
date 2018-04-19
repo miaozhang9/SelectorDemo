@@ -49,8 +49,6 @@
     _titleLab = titleLab;
     [self.view addSubview:titleLab];
     
-    __weak typeof (self) weakself = self;
-    
     [titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(button);
         make.top.equalTo(@(10+ 64));
@@ -98,8 +96,6 @@
     ACAvailableDayDTO *dayDTO5 = [ACAvailableDayDTO new];
     dayDTO5.appointdate = @"1523980800000";
     dayDTO5.isPassToday = @"0";
-    
-    
     
     NSMutableArray *schedules = [NSMutableArray new];
     [schedules addObject: dayDTO];
