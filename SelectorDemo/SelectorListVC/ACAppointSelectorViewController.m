@@ -107,8 +107,6 @@
     [self ac_hideCurrentViewController];
 }
 - (void)giveUpAppoint {
-    
-    [[ACAlertManager shareAlertManager] setViewController:self];
     __weak typeof(self) weakSelf = self;
     [[ACAlertManager shareAlertManager] showAlertMessageWithTitle:@"重要！" content:@"您将放弃已成功预约的面核时间，\n选择放弃，您需要重新预约" okeyTitle:@"放弃" okeyAction:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -123,8 +121,6 @@
 #pragma mark --ACAppointSelectorDelegate
 
 - (void)confirmAppointSelectTime:(ACAvailableDayDTO *)availableDayDTO availableDTO:(ACAvailableDTO *)availableDTO {
-    
-    [[ACAlertManager shareAlertManager] setViewController:self];
     __weak typeof(self) weakSelf = self;
     [[ACAlertManager shareAlertManager] showAlertMessageWithTitle:@"温馨提示" content:@"确定预约该时段进行面核？" okeyTitle:@"预约" okeyAction:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;

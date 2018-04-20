@@ -29,7 +29,7 @@
     [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertVC dismissViewControllerAnimated:YES completion:nil ];
     }]];
-    [self.viewController presentViewController:alertVC animated:YES completion:nil];
+    [[self getCurrentVC] presentViewController:alertVC animated:YES completion:nil];
 }
 - (void)showAlertMessageWithOneContent:(NSString *)content actiontitle:(NSString *)title okeyAction:(ActionBlock)okeyAction{
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:content preferredStyle:(UIAlertControllerStyleAlert)];
@@ -40,7 +40,7 @@
         }
         [alertVC dismissViewControllerAnimated:YES completion:nil ];
     }]];
-    [self.viewController presentViewController:alertVC animated:YES completion:nil];
+    [[self getCurrentVC] presentViewController:alertVC animated:YES completion:nil];
 }
 - (void)showAlertMessageWithContent:(NSString *)content okeyAction:(ActionBlock)okeyAction cancelAction:(ActionBlock)cancelAction {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:content preferredStyle:(UIAlertControllerStyleAlert)];
@@ -57,7 +57,7 @@
         }
         [alertVC dismissViewControllerAnimated:YES completion:nil ];
     }]];
-    [self.viewController presentViewController:alertVC animated:YES completion:nil];
+    [[self getCurrentVC] presentViewController:alertVC animated:YES completion:nil];
 }
 
 
@@ -80,7 +80,29 @@
         }]];
         
     }
-    [self.viewController presentViewController:alertVC animated:YES completion:nil];
+    [[self getCurrentVC] presentViewController:alertVC animated:YES completion:nil];
+}
+
+
+#pragma mark - 获取当前屏幕显示的viewcontroller
+- (UIViewController *)getCurrentVC {
+    UIViewController *resultVC;
+    resultVC = [self topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
+    while (resultVC.presentedViewController) {
+        resultVC = [self topViewController:resultVC.presentedViewController];
+    }
+    return resultVC;
+}
+
+- (UIViewController *)topViewController:(UIViewController *)vc {
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        return [self topViewController:[(UINavigationController *)vc topViewController]];
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        return [self topViewController:[(UITabBarController *)vc selectedViewController]];
+    } else {
+        return vc;
+    }
+    return nil;
 }
 
 @end

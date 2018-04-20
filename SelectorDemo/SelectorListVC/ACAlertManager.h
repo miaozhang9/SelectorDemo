@@ -13,8 +13,6 @@ typedef void(^ActionBlock)(void);
 
 @interface ACAlertManager : NSObject
 
-@property (nonatomic, strong) UIViewController *viewController;
-
 + (instancetype)shareAlertManager;
 
 - (void)showAlertMessageWithContent:(NSString *)content;
