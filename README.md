@@ -4,6 +4,7 @@
 （注意：pod库需要导入 pod 'Masonry', '1.1.0'）
 
 
+
 ### *代码调用事例
 #### *左右联动选择器
 ```
@@ -91,6 +92,7 @@ return dto;
 <p align="left">
 <img width="375" height="650" src="https://github.com/miaozhang9/SelectorDemo/blob/master/Screenshots/1.png">
 </p>
+
 
 ### *上下联动选择表图示
 <p align="left">
